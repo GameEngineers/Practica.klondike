@@ -48,7 +48,7 @@ public abstract class ManualController {
     }
 
     protected Card wastePop() {
-        return this.wastePop();
+        return this.game.wastePop();
     }
 
     public Card wastePeek(){
