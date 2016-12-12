@@ -1,7 +1,6 @@
 package klondike.views.console;
 
 import klondike.controllers.CommandExitController;
-import klondike.utils.IO;
 
 public class ExitView extends CommandView {
 

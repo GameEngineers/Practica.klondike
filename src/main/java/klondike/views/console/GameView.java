@@ -3,8 +3,6 @@ package klondike.views.console;
 import klondike.controllers.MenuController;
 import klondike.models.Suit;
 
-import org.junit.runners.Suite;
-
 import klondike.controllers.CommandController;
 import klondike.controllers.CommandControllerVisitor;
 import klondike.controllers.CommandExitController;

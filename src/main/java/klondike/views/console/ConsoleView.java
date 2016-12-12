@@ -1,9 +1,7 @@
 package klondike.views.console;
 
 import klondike.View;
-import klondike.controllers.CommandExitController;
 import klondike.controllers.MenuController;
-import klondike.controllers.CommandController;
 import klondike.controllers.OperationController;
 import klondike.controllers.StartController;
 
@@ -12,8 +10,6 @@ public class ConsoleView implements View {
     private StartView startView;
 
     private GameView gameView;
-
-    private MenuView menuView;
 
     public ConsoleView() {
         startView = new StartView();
