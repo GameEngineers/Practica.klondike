@@ -22,7 +22,7 @@ public class PileView {
                     io.write("[");
                 }
             }
-            for (int j = 0; j < presenterController.pileUpTurnedCardsSize(i); j++) {
+            for (int j = presenterController.pileUpTurnedCardsSize(i) - 1; j >= 0; j--) {
                 new CardView(presenterController.pilePeekAt(i, j)).write();
             }
             if (presenterController.pileDownTurnedCardsIsEmpty(i) && presenterController.pileUpTurnedCardsIsEmpty(i)) {

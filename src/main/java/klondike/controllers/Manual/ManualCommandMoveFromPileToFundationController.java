@@ -22,7 +22,7 @@ public class ManualCommandMoveFromPileToFundationController extends ManualComman
         if(this.pileUpTurnedCardsIsEmpty(pileOrigin)){
             return Error.EMPTY_UPTURNED;
         } else {
-            Card topPileOrigin = this.pilePeekAt(pileOrigin, this.pileUpTurnedCardsSize(pileOrigin) - 1);
+            Card topPileOrigin = this.pilePeekAt(pileOrigin, 0);
             return this.validateMoveToFundation(topPileOrigin);
         }
     }

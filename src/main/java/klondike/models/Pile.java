@@ -22,7 +22,7 @@ public class Pile {
 
     public void putPartialPile(Stack<Card> partialPile) {
         assert partialPile != null;
-        for (int i = 0; i < partialPile.size(); i++) {
+        while (!partialPile.empty()) {
             this.upTurnedCards.push(partialPile.pop());
         }
     }
@@ -46,7 +46,7 @@ public class Pile {
         assert index >= 0;
         assert index < this.upTurnedCardsSize();
         assert!this.upTurnedCardsIsEmpty();
-        return this.upTurnedCards.get(index);
+        return this.upTurnedCards.get((this.upTurnedCardsSize() - 1) - index);
     }
 
     public int upTurnedCardsSize() {

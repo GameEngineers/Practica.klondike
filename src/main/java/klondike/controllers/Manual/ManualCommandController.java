@@ -18,7 +18,7 @@ public abstract class ManualCommandController extends ManualController implement
             if (card.getValue() != this.getSuitMaxiumValue())
                 return Error.CARD_NOT_PROPERTY;
         } else {
-            Card topPileTarget = this.pilePeekAt(pileTarget, this.pileUpTurnedCardsSize(pileTarget) - 1);
+            Card topPileTarget = this.pilePeekAt(pileTarget, 0);
             if (!card.inDistinctSuitDescendSequence(topPileTarget)) {
                 return Error.CARD_NOT_PROPERTY;
             }
