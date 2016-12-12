@@ -124,6 +124,7 @@ class GameView implements CommandControllerVisitor {
         } else {
             moveFundationToPileController.move(suit, pileTarget);
         }
+        this.showGame(moveFundationToPileController);
     }
 
     @Override

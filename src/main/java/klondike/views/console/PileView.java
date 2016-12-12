@@ -15,13 +15,11 @@ public class PileView {
         IO io = new IO();
         for (int i = 0; i < presenterController.getNumberOfPiles(); i++) {
             io.write("Escalera " + (i + 1) + ":");
-            for (int j = 0; j < presenterController.pileDownTurnedCardsSize(i); j++) {
-                if (j < presenterController.pileDownTurnedCardsSize(i) - 1)
+            for (int j = 0; j <= presenterController.pileDownTurnedCardsSize(i) - 1; j++) {
+                if (presenterController.pileUpTurnedCardsIsEmpty(i) && j == presenterController.pileDownTurnedCardsSize(i) - 1) {
+                    io.write("[X,X]");
+                } else {
                     io.write("[");
-                else {
-                    if (presenterController.pileUpTurnedCardsIsEmpty(i)) {
-                        io.write("[X,X]");
-                    }
                 }
             }
             for (int j = 0; j < presenterController.pileUpTurnedCardsSize(i); j++) {
